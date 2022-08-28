@@ -1,0 +1,12 @@
+# frozen_string_literal: true
+
+# Handler
+class Handler
+  def next_handler(handler)
+    raise NotImplementedError, "#{self.class} has no implemented method#{__method__}"
+  end
+
+  def handle(request)
+    raise NotImplementedError, "#{self.class} has not implemented method #{__method__}"
+  end
+end
